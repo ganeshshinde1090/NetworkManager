@@ -3,7 +3,7 @@ import Network
 import Foundation
 
 @available(iOS 13.0, *)
-final class NetworkMonitor: ObservableObject {
+public final class NetworkMonitor: ObservableObject {
     
     let monitor = NWPathMonitor()
     let queue = DispatchQueue(label: "networkmanager.queue")
