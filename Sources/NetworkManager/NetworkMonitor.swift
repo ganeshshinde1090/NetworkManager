@@ -9,8 +9,7 @@ public final class NetworkMonitor: ObservableObject {
     let queue = DispatchQueue(label: "networkmanager.queue")
     
     /// Update connenction status
-    @Published var isConnected = true
-    
+    @Published public var isConnected = true
     
    public init() {
         monitor.pathUpdateHandler = { [weak self] path in
