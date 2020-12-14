@@ -12,7 +12,7 @@ public final class NetworkMonitor: ObservableObject {
     @Published var isConnected = true
     
     
-    init() {
+   public init() {
         monitor.pathUpdateHandler = { [weak self] path in
             DispatchQueue.main.async {
                 self?.isConnected = path.status == .satisfied ? true : false
